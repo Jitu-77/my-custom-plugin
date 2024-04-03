@@ -45,7 +45,7 @@ public void getHardwareDetails(PluginCall call) {
     ActivityManager.MemoryInfo mi = new ActivityManager.MemoryInfo();
     ActivityManager activityManager = (ActivityManager) getContext().getSystemService(Context.ACTIVITY_SERVICE);
     activityManager.getMemoryInfo(mi);
-    long availableMegs = mi.availMem/(1024*1024*1024); // in megabytes
+    long availableMegs = mi.availMem/(1024*1024*1024);  // in megabytes
     long totalMemory = mi.totalMem/(1024*1024*1024);
 
     StatFs stat = new StatFs(Environment.getDataDirectory().getPath());
